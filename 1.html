@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 3 06/07</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 25px;
+        }
+        #mostrar{
+            margin: 25px;
+            display: none;
+        }
+        #mostrar p {
+            padding: 5px;
+        }
+        h1{
+            margin: 50px;
+        }
+        button{
+            margin: 50px;
+            padding: 10px;
+            background-color: black;
+            color: aliceblue;
+            cursor: pointer;
+        }
+        footer p {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            margin: 50px;
+            margin-top: 100px;
+        }
+
+    </style>
+<body>
+    <script>
+        var nomejs = prompt("Qual seu nome?");
+        alert("Seja muito bem vindo " + nomejs);
+        var anojs = prompt("Em que ano você nasceu?");
+        var idadejs = 2023 - anojs;
+        var cidadejs = prompt("Qual cidade você mora?");
+        var estadojs = prompt(cidadejs+ " fica em qual estado");
+        var maiormenor;
+            if( idadejs >= 18 ){
+                maiormenor = "maior";
+            } else{
+                maiormenor = "menor";
+            }
+        function dados (){
+            var div = document.getElementById("mostrar");
+            div.style.display = "block"; 
+        
+        }
+
+    </script>
+    <main>
+        <h1>Prova 3 - INF9</h1>
+        <h4>Orientadora: Rafaela Lia Zuge Paganotto</h4>
+        <div id="mostrar">
+            <p>Seu nome é <script>document.write(""+nomejs);</script></p>
+            
+            <p>Você nasceu no ano de <p><script>document.write(""+anojs);</script> 
+                e tem <script>document.write(""+idadejs);</script> anos de idade.</p>
+
+            <p>Você é da cidade de <script>document.write(""+cidadejs);</script> 
+                que fica no estado do <script>document.write(""+estadojs);</script>.</p>
+            
+            <p>Você é <script>document.write(""+maiormenor)</script> de idade.</p>
+        </div>
+
+        <button onclick="dados()">Ver informações</button>
+
+        <p>Obrigado por participar!</p>
+    </main>
+    <footer>
+        <p>by: Henrique Denisieski Vieira</p>
+    </footer>
+</body>
+</html> 
